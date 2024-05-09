@@ -4,11 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
 
 <body>
     <h1>This is a Test Page</h1>
+
+    <form id="formation" name="my-form" action="#" method="post" onsubmit="myFunc()">
+        <h2>Join my Email List</h2>
+        <legend>You Face</legend>
+        <label for="avatar">Upload Image:</label>
+        <input type="file" id="avatar" name="avatar">
+        <p>Image Preview:</p>
+        <img id="preview" width="500">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="myname" required aria-required="true" min="3" max="20">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="telephone">Telephone Number:</label>
+        <input type="tel" id="telephone" name="telephone" value="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+        <label for="password">Create a Password:</label>
+        <input type="password" id="password" name="password" required aria-required="true"
+            placeholder="Must contain at least one  number and one uppercase and lowercase"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+        <div class="radio">
+            <h4>Best time to contact...</h4>
+            <label for="morning">Morning</label>
+            <input type="radio" id="morning" name="contact-time" value="morning">
+
+            <label for="afternoon">Afternoon: </label>
+            <input type="radio" id="afternoon" name="contact-time" value="afternoon">
+
+            <label for="evening">Evening: </label>
+            <input type="radio" id="evening" name="contact-time" value="evening">
+
+        </div>
+        <label for="request">Enter Special Request:</label>
+        <textarea id="request" maxlength="20"></textarea>
+        <input type="submit" id="submit" value="submit">
+
+
+
+
+    </form>
+
+
+
+    <script src="app.js"></script>
+    <script src="https://url.nucamp.co/datingjs"></script>
 </body>
 
 </html>
